@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idea Analyser</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">IA</div>
+          <div>
+            <p class="eyebrow">Brainstorm lab</p>
+            <h1>Idea Analyser</h1>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="hero panel">
+          <div class="hero-copy">
+            <p class="eyebrow accent">Gen-Z startup filter</p>
+            <h2>Turn chaotic sparks into launchable ideas.</h2>
+            <p class="hero-text">
+              Drop a raw concept, and the app gives it a quick viability readout, a traction vibe, and a witty startup angle.
+            </p>
+          </div>
+        </section>
+
+        <section class="workspace panel">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Input</p>
+              <h3>Submit your idea</h3>
+            </div>
+          </div>
+
+          <form id="idea-form" class="idea-form">
+            <label for="idea-input">Your raw idea</label>
+            <textarea id="idea-input" name="idea" rows="5" placeholder="Example: AI sidekick for doom-scrolling creatives who need a structure and a snack break."></textarea>
+            <div class="form-actions">
+              <button class="primary-button" type="submit">Analyse idea</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="result panel" id="result-panel">
+          <p class="eyebrow">Readout</p>
+          <h3>Idea health</h3>
+          <p class="empty-state" id="result-text">
+            No analysis yet. Try a high-concept startup idea for a quick vibe check.
+          </p>
+          <div class="score-grid hidden" id="score-grid">
+            <div>
+              <span>Feasibility</span>
+              <strong id="score-feasibility">0</strong>
+            </div>
+            <div>
+              <span>Interest</span>
+              <strong id="score-interest">0</strong>
+            </div>
+            <div>
+              <span>Tone</span>
+              <strong id="score-tone">-</strong>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
